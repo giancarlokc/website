@@ -1,11 +1,6 @@
 const React = require('react')
 const ReactDom = require('react-dom')
-
-class App extends React.Component {
-  render() {
-    return <div>HELLO</div>
-  }
-}
+const App = require('./src/App')
 
 window.addEventListener("DOMContentLoaded", function() {
   const domContainer = document.getElementById("root");

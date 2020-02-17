@@ -1,13 +1,11 @@
-require('./page.less')
+require("./page.less");
 
-const React = require('react')
+const React = require("react");
 
 class Page extends React.PureComponent {
   render() {
-    return (
-      <div className='page'>{this.props.children}</div>
-    )
+    return <div className="page">{this.props.children}</div>;
   }
 }
 
-module.exports = Page
+module.exports = Page;

@@ -1,18 +1,16 @@
-require('./contact.less')
+require("./contact.less");
 
-const React = require('react')
-const Page = require('../Page')
+const React = require("react");
+const Page = require("../Page");
 
 class Contact extends React.PureComponent {
   render() {
     return (
       <Page>
-        <div className='contact'>
-          contact
-        </div>
+        <div className="contact">contact</div>
       </Page>
-    )
+    );
   }
 }
 
-module.exports = Contact
+module.exports = Contact;

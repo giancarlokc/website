@@ -1,18 +1,16 @@
-require('./interests.less')
+require("./interests.less");
 
-const React = require('react')
-const Page = require('../Page')
+const React = require("react");
+const Page = require("../Page");
 
 class Interests extends React.PureComponent {
   render() {
     return (
       <Page>
-        <div className='interests'>
-          interests
-        </div>
+        <div className="interests">interests</div>
       </Page>
-    )
+    );
   }
 }
 
-module.exports = Interests
+module.exports = Interests;

@@ -1,27 +1,27 @@
-const GlobalStore = require('./GlobalStore')
+const GlobalStore = require("./GlobalStore");
 
 const PAGES = {
-  HOME: 'Home',
-  INTERESTS: 'Interests',
-  PROJECTS: 'Projects',
-  TIMELINE: 'Timeline',
-  CONTACT: 'Contact'
-}
+  HOME: "Home",
+  INTERESTS: "Interests",
+  PROJECTS: "Projects",
+  TIMELINE: "Timeline",
+  CONTACT: "Contact"
+};
 
 const STATE = {
-  activePage: 'activePage'
-}
+  activePage: "activePage"
+};
 
 class AppStore extends GlobalStore {
-  constructor () {
+  constructor() {
     super({
       [STATE.activePage]: PAGES.HOME
-    })
+    });
   }
 
-  setActivePage (activePage) {
-    this.update(STATE.activePage, activePage)
+  setActivePage(activePage) {
+    this.update(STATE.activePage, activePage);
   }
 }
 
-module.exports = { AppStore: new AppStore(), PAGES }
+module.exports = { AppStore: new AppStore(), PAGES };

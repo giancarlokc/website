@@ -1,11 +1,11 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  mode: 'development',
-  entry: './app.js',
+  mode: "development",
+  entry: "./app.js",
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "index.js",
+    path: path.resolve(__dirname, "dist")
   },
   module: {
     rules: [
@@ -15,8 +15,12 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.less$/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'less-loader' }]
+        test: /\.(less|css)$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "less-loader" }
+        ]
       }
     ]
   }

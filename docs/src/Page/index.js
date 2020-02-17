@@ -1,1 +1,1 @@
-module.exports = require('./Page')
+module.exports = require("./Page");

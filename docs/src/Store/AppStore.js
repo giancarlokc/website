@@ -2,9 +2,8 @@ const GlobalStore = require("./GlobalStore");
 
 const PAGES = {
   HOME: "Home",
-  INTERESTS: "Interests",
   PROJECTS: "Projects",
-  TIMELINE: "Timeline",
+  ABOUT_ME: "About Me",
   CONTACT: "Contact"
 };
 

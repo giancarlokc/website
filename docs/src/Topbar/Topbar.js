@@ -5,9 +5,8 @@ const { AppStore, PAGES } = require("../Store/AppStore");
 
 const TOP_BAR_ENTRIES = [
   PAGES.HOME,
-  PAGES.INTERESTS,
   PAGES.PROJECTS,
-  PAGES.TIMELINE,
+  PAGES.ABOUT_ME,
   PAGES.CONTACT
 ];
 

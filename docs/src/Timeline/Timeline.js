@@ -2,12 +2,9 @@ require("./timeline.less");
 require("react-vertical-timeline-component/style.min.css");
 
 const React = require("react");
+const PropTypes = require("prop-types")
 const Page = require("../Page");
-const {
-  VerticalTimeline,
-  VerticalTimelineElement
-} = require("react-vertical-timeline-component");
-const ProjectList = require("../../Projects.json");
+const {VerticalTimeline, VerticalTimelineElement} = require("react-vertical-timeline-component");
 
 class Timeline extends React.PureComponent {
   render() {
@@ -15,12 +12,12 @@ class Timeline extends React.PureComponent {
       <Page>
         <div className="timeline">
           <VerticalTimeline>
-            {getProjectsInOrder().map(project => (
+            {this.props.entries.map(project => (
               <VerticalTimelineElement
                 key={project.title}
                 className="timeline-project-entry"
                 date={project.date}
-                iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+                iconStyle={{background: "rgb(33, 150, 243)", color: "#fff"}}
                 icon={
                   <img
                     src={
@@ -41,10 +38,8 @@ class Timeline extends React.PureComponent {
   }
 }
 
-function getProjectsInOrder() {
-  const list = ProjectList.slice();
-  list.sort((a, b) => new Date(a.date) - new Date(b.date));
-  return list;
+Timeline.propTypes = {
+  entries: PropTypes.array.isRequired
 }
 
 module.exports = Timeline;

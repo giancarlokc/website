@@ -1,7 +1,8 @@
 .timeline {
   height: 100%;
   overflow: auto;
-  background-color: #DEF;
+  background-color: #4a4a4a;
+  font-family: sans-serif;
 
   .timeline-project-entry {
     display: flex;
@@ -19,6 +20,13 @@
     img {
       height: 100%;
       width: 100%;
+      object-fit: cover;
     }
+  }
+
+  .vertical-timeline-element-date {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px !important;
   }
 }

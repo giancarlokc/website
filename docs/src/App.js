@@ -1,17 +1,22 @@
 const React = require("react");
 const Topbar = require("./Topbar");
 const Home = require("./Home");
-const Interests = require("./Interests");
-const Projects = require("./Projects");
 const Timeline = require("./Timeline");
 const Contact = require("./Contact");
 const { AppStore, PAGES } = require("./Store/AppStore");
+const ProjectList = require("../Projects.json");
+const LifeEvents = require("../LifeEvents.json");
+
+function sortEntriesChronologically(entries) {
+  const list = entries.slice();
+  list.sort((a, b) => new Date(a.date) - new Date(b.date));
+  return list;
+}
 
 const CONTENT_PAGES = [
   { id: PAGES.HOME, content: <Home /> },
-  { id: PAGES.INTERESTS, content: <Interests /> },
-  { id: PAGES.PROJECTS, content: <Projects /> },
-  { id: PAGES.TIMELINE, content: <Timeline /> },
+  { id: PAGES.PROJECTS, content: <Timeline entries={sortEntriesChronologically(ProjectList)} /> },
+  { id: PAGES.ABOUT_ME, content: <Timeline entries={sortEntriesChronologically(LifeEvents)} /> },
   { id: PAGES.CONTACT, content: <Contact /> }
 ];
 
